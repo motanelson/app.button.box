@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from tkinter import filedialog
 
 class myapps:
     def __init__(self,root:tk.Tk,tittle:str,text:str,backgrounds:str,foregrounds:str):
@@ -19,3 +19,11 @@ def views(tittle:str="view",text:str="hello world...\n",backgrounds:str="black",
     root=tk.Tk()
     apps=myapps(root,tittle,text,backgrounds,foregrounds)
     root.mainloop()
+import txtview
+
+
+
+
+f1=filedialog.askopenfile(mode="r",defaultextension="*.*",title="open file")
+a=f1.read()
+views(tittle="text view",text=a)
